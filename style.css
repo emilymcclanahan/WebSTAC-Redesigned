@@ -1,0 +1,573 @@
+body {
+  background-color: #f2f3f4;
+  width: 950px;
+  margin: auto;
+  color: #2F2F2F;
+  position: relative;
+}
+
+#fixed-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #F1ECEC;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+
+.container {
+  margin: auto;
+  width: 950px;
+}
+
+#left {
+  width: 95px;
+  float: left;
+}
+
+#fixed-head img {
+  height: 60px;
+  margin-left: 32px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+#webstac {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: right;
+  font-size: 30px;
+  color: darkred;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a i {
+  font-size: 15px;
+}
+
+#navbar {
+  font-size: 20px;
+  text-align: right;
+}
+
+#navbar p {
+  margin-top: 15px;
+  margin-left: 50px;
+  float: right;
+  text-align: right;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+
+#navbar p i {
+  font-size: 15px;
+}
+
+#navbar p:hover, a:hover {
+  color: darkred;
+}
+
+.dropdown {
+  position: fixed;
+  top: 125.2px;
+  left: 0;
+  background-color: #f2f3f4;
+  z-index: 2;
+  width: 100%;
+  display: none;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+
+.dropdown-inner {
+  width: 950px;
+  margin: auto;
+}
+
+.dropdown i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.fa-chevron-up {
+  display: none !important;
+}
+
+.dropdown-with-head:hover .fa-chevron-up {
+  display: inline !important;
+}
+
+.dropdown-with-head:hover .fa-chevron-down {
+  display: none;
+}
+
+.dropdown-with-head:hover .dropdown {
+  display: block;
+}
+
+.dropdown-with-head:hover p {
+  color: darkred;
+}
+
+.dropdown-section {
+  float: left;
+  text-align: left;
+}
+
+#academic-dropdown .dropdown-section {
+  width: 300.3px;
+  margin-right: 20px;
+}
+
+#academic-dropdown #courses-and-registration {
+  margin-right: 0;
+}
+
+#engineering {
+  width: 392px;
+}
+
+#user {
+  width: 412px;
+}
+
+#account {
+  margin-left: 150px;
+  width: 500px;
+}
+
+.dropdown h2 {
+  margin-top: 20px;
+  padding-top: 0;
+  font-size: 25px;
+}
+
+.dropdown a {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.welcome-to-webstac {
+  margin-top: 170px;
+  margin-bottom: 58px;
+  margin-left: 70px;
+}
+
+.welcome-to-webstac img {
+  float: left;
+  border-radius: 50%;
+  border: 0.1px solid lightgrey;
+  height: 150px;
+}
+
+#user-info {
+  margin-left: 255px;
+}
+
+#name {
+  font-size: 25px;
+}
+
+#prof-button {
+  margin-top: 20px;
+  position: relative;
+  bottom: 3px;
+  border: 1px solid lightgrey;
+  color: #2F2F2F;
+  font-weight: 600;
+  margin-left: 30px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+#user-info p {
+  font-size: 17px;
+}
+
+#e {
+  margin-bottom: 0;
+}
+
+#i {
+  margin-top: 2px;
+}
+
+.m {
+  float: left;
+  width: 29%;
+  margin-top: 0;
+}
+
+#m1 {
+  width: 25.5%
+}
+#gm {
+  width: 38%;
+}
+
+.m, #e, #i {
+  font-weight: bold;
+}
+
+#major, #minor, #email, #student-id, #graduation {
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+#email {
+  text-transform: lowercase;
+}
+
+#list-view, #class-schedule, #webstac-news {
+  display: none;
+}
+
+.buttons {
+  text-align: center;
+  border-top: 1px solid lightgrey;
+}
+
+button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  background-color: inherit;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-right: 47.5px;
+  margin-left: 47.5px;
+}
+
+button:focus {
+  outline: none;
+}
+
+#links-button, #grid-button {
+  border-top: 1px solid darkred;
+  color: darkred;
+}
+
+#helpful-links {
+  margin-top: 40px;
+  position: relative;
+  border: 1px solid lightgrey;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+
+#helpful-links h2 {
+  background-color: #F1ECEC;
+  border-bottom: 1px solid lightgrey;
+  margin: 0;
+  padding: 25px;
+  font-size: 21.5px;
+}
+
+#helpful-links i {
+  position: absolute;
+  right: 35px;
+}
+
+#tools-links, #calendars-links, #academic-links, #help-links, #forms-links {
+  display: none;
+  margin: 20px;
+}
+
+#helpful-links a {
+  display: block;
+  padding: 5px;
+  font-size: 17.5px;
+}
+
+#grid-view {
+  border-collapse: collapse;
+  background-color: #F1ECEC;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  font-family: "Courier New", Courier, monospace;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+
+#grid-view th {
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+  width: 192px;
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+#grid-view td {
+  color: #f2f3f4;
+  text-align: center;
+  font-size: 16px;
+}
+
+#grid-view .time {
+  text-align: right;
+  padding-right: 10px;
+  padding-left: 0;
+  width: 90px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#a83 .tuesday, #a83 .thursday, #a9 .tuesday, #a9 .thursday, #a93 .tuesday, #a93 .thursday {
+  background-color: #407f7f;
+  border-left: 1px solid #F1ECEC;
+  border-right: 1px solid #F1ECEC;
+}
+
+#a93 .tuesday, #a93 .thursday {
+  border-bottom: 1px solid #F1ECEC;
+}
+
+#a10 .tuesday, #a10 .thursday, #a103 .tuesday, #a103 .thursday, #a11 .tuesday, #a11 .thursday {
+  background-color: #55aa55;
+  border-left: 1px solid #F1ECEC;
+  border-right: 1px solid #F1ECEC;
+}
+
+#a11 .monday, #a11 .wednesday, #a11 .friday, #a113 .monday, #a113 .wednesday, #a113 .friday {
+  background-color: #d46a6a;
+  border-left: 1px solid #F1ECEC;
+  border-right: 1px solid #F1ECEC;
+}
+
+#a113 .monday, #a113 .tuesday, #a113 .wednesday, #a113 .thursday, #a113 .friday {
+  border-bottom: 1px solid #F1ECEC;
+}
+
+#p12 .monday, #p12 .tuesday, #p12 .wednesday, #p12 .thursday, #p12 .friday, #p123 .monday, #p123 .tuesday, #p123 .wednesday, #p123 .thursday, #p123 .friday {
+  background-color: #d49a6a;
+  border-left: 1px solid #F1ECEC;
+  border-right: 1px solid #F1ECEC;
+}
+
+#list-view {
+  margin-top: 50px;
+  margin-bottom: 57px;
+  border-collapse: collapse;
+  background-color: #F1ECEC;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+
+#list-view th {
+  background-color: #E0C9C9;
+  text-transform: uppercase;
+}
+
+#list-view th, #list-view td {
+  padding: 15px;
+  border: 1px solid grey;
+  font-size: 15px;
+}
+
+.news {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 263.3px;
+  float: left;
+  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 400px;
+  background-color: #F1ECEC;
+  position: relative;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+
+#big-pend {
+  margin-right: 0;
+}
+
+.news-head {
+  height: 100px;
+}
+
+.news img {
+  height: 100px;
+  border-radius: 0;
+  border: none;
+  float: left;
+  margin-right: 20px;
+}
+
+#exclam {
+  border-radius: 50%;
+}
+
+#webstac-news h2 {
+  padding-top: 20px;
+}
+
+.news p {
+  font-size: 18px;
+}
+
+.call-to-action {
+  font-size: 25px;
+  padding-left: 15px;
+  padding-bottom: 25px;
+  position: absolute;
+  bottom: 0;
+}
+
+.call-to-action:hover {
+  color: darkred;
+}
+
+.call-to-action:hover .fa-arrow-right {
+  margin-left: 6px;
+}
+
+form {
+  display: none;
+  background-color: #F1ECEC;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  height: 79vh;
+  border: 1px solid lightgrey;
+  box-shadow: 5px 5px 10px lightgrey;
+}
+
+form h1 {
+  background-color: darkred;
+  color: #f2f3f4;
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+select {
+  background-color: #F1ECEC;
+  position: absolute;
+  left: 310px;
+  font-size: 20px;
+  width: 580px;
+  border: none;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+  -webkit-appearance: none;
+  font-family: "Courier New", Courier, monospace;
+  padding-left: 8px;
+}
+
+textarea {
+  background-color: #f2f3f4;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#dots {
+  font-size: 30px;
+  letter-spacing: 36px;
+  position: absolute;
+  left: 55px;
+  bottom: 30px;
+}
+
+#submit {
+  letter-spacing: normal;
+  color: #f2f3f4;
+  background-color: darkred;
+  position: absolute;
+  font-size: 30px;
+  bottom: 28px;
+  right: 10px;
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  margin-right: 47.5px;
+  margin-left: 47.5px;
+}
+
+@media (max-width: 950px) {
+  body {
+    width: 100%;
+  }
+
+  #fixed-head {
+    display: none;
+  }
+
+  button span {
+    display: none;
+  }
+
+  .welcome-to-webstac {
+    margin-top: 60px;
+  }
+
+  #user-img {
+    display: none;
+  }
+
+  #user-info {
+    margin-left: 0;
+  }
+
+  #buttons {
+    width: 100%;
+  }
+
+  #buttons button {
+    font-size: 25px;
+  }
+
+  #helpful-links {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  #grid-view {
+    width: 100%;
+  }
+
+  .news {
+    width: 80%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+  select {
+    width: 40%;
+  }
+  textarea {
+    display: block;
+    width: 90%;
+  }
+  #dots {
+    display: none;
+  }
+}

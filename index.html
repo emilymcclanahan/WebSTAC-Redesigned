@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <title>Webstac Redesigned</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="everything">
+    <div id="fixed-head">
+      <div class="container">
+        <div id="left" onclick="home()">
+          <img src="WashU.png" alt="Washington University in St. Louis Seal">
+          <p id="webstac">WebSTAC</p>
+        </div>
+        <h1>Washington University in St. Louis</h1>
+        <div id="navbar">
+          <p><a href="#">Logout <i class="fas fa-sign-out-alt"></i></a></p>
+          <p><a href="https://aiswiki.wustl.edu/webstachelp/index.php/WebSTAC_Help">Help <i class="far fa-question-circle"></i></a></p>
+          <div class="dropdown-with-head">
+            <p>Billing <i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></p>
+            <div class="dropdown" id="billing-dropdown">
+              <div class="dropdown-inner">
+                <div class="dropdown-section" id="account">
+                  <h2><i class="far fa-user-circle"></i> Account Information</h2>
+                  <a href="#">Account Inquiry</a>
+                  <a href="#">Account Holds</a>
+                  <a href="#">Telephone Account</a>
+                </div>
+                <div class="dropdown-section" id="payment">
+                  <h2><i class="far fa-credit-card"></i> Payment</h2>
+                  <a href="#">Bear Bucks</a>
+                  <a href="#">Meal Plan</a>
+                  <a href="#">Pay/View Bills</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-with-head">
+            <p>Resources <i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></p>
+            <div class="dropdown" id="resource-dropdown">
+              <div class="dropdown-inner">
+                <div class="dropdown-section" id="engineering">
+                  <h2><i class="fas fa-shapes"></i> Engineering</h2>
+                  <a href="#">Advisors</a>
+                  <a href="#">Change WU School</a>
+                  <a href="#">Engineering DARS</a>
+                  <a href="#">Verification</a>
+                </div>
+                <div class="dropdown-section" id="user">
+                  <h2><i class="fas fa-users"></i> User Information</h2>
+                  <a href="#">User Profile</a>
+                  <a href="#">Contact Information</a>
+                  <a href="#">Change Password</a>
+                  <a href="#">WUSTL Faces</a>
+                </div>
+                <div class="dropdown-section" id="other">
+                  <h2><i class="fas fa-paperclip"></i> Other</h2>
+                  <a href="#">Housing Portal</a>
+                  <a href="#">Room Key Kiosk</a>
+                  <a href="#">Voter Registration</a>
+                  <a href="#">FERPA Rights</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-with-head">
+            <p>Academics <i class="fas fa-chevron-down"></i><i class="fas fa-chevron-up"></i></p>
+            <div class="dropdown" id="academic-dropdown">
+              <div class="dropdown-inner">
+                <div class="dropdown-section" id="grades">
+                  <h2><i class="fas fa-school"></i> Grades</h2>
+                  <a href="#">Scores and Placements</a>
+                  <a href="#">Grades and GPA</a>
+                  <a href="#">Unofficial Transcript</a>
+                  <a href="#">Order Transcripts</a>
+                </div>
+                <div class="dropdown-section" id="student-plan">
+                  <h2><i class="fas fa-user-graduate"></i> Student Plan</h2>
+                  <a href="#">Course Summary</a>
+                  <a href="#">Intent to Graduate</a>
+                  <a href="#">Major Programs</a>
+                  <a href="#">WUachieve</a>
+                </div>
+                <div class="dropdown-section" id="courses-and-registration">
+                  <h2><i class="fas fa-book"></i> Courses and Registration</h2>
+                  <a href="#">Course Evaluations</a>
+                  <a href="#">Course Listings</a>
+                  <a href="#">Registration</a>
+                  <a href="#">Registration Worksheet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="welcome-to-webstac" id="welc">
+      <img id="user-img" src="default-user.jpg" alt="Profile Picture">
+      <div id="user-info">
+        <p id="n"><span id="name"></span><button id="prof-button" onclick="editProfile()">Edit Profile</button></p>
+        <div id="row">
+          <p class="m">Major: <span id="major">Undeclared</span></p>
+          <p class="m" id="m1">Minor: <span id="minor">None</span></p>
+          <p class="m" id="gm">Graduation: <span id="graduation">2023</span></p>
+        </div>
+        <div id="sect">
+          <p id="e">WUSTL Email: <span id="email"></span></p>
+          <p id="i">Student ID: <span id="student-id"></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="buttons" id="buttons">
+      <button onclick="link()" id="links-button"><i class="fas fa-link"></i><span> Helpful Links</span></button>
+      <button onclick="schedule()" id="schedule-button"><i class="fas fa-calendar"></i><span> Class Schedule</span></button>
+      <button onclick="news()" id="news-button"><i class="far fa-newspaper"></i><span> Webstac News</span></button>
+    </div>
+    <div id="helpful-links">
+      <div class="links-group" id="student-tools">
+        <h2 onclick="tools()" id="tools-title">Student Tools <i class="fas fa-chevron-circle-right"></i></h2>
+        <ul id="tools-links">
+          <li><a href="https://wustl.instructure.com/">Canvas</a></li>
+          <li><a href="https://outlook.office.com/mail/inbox">Outlook</a></li>
+          <li><a href="https://grouporganizer.wustl.edu/">WUGO</a></li>
+        </ul>
+      </div>
+      <div class="links-group" id="calendars-and-maps">
+        <h2 onclick="calendars()" id="calendars-title">Calendars & Maps <i class="fas fa-chevron-circle-right"></i></h2>
+        <ul id="calendars-links">
+          <li><a href="https://registrar.wustl.edu/academic-calendars/">Academic Calendar</a></li>
+          <li><a href="http://registrar.wustl.edu/student-records/registration/semester-academic-dates-deadlines/">Dates & Deadlines</a></li>
+          <li><a href="https://registrar.wustl.edu/student-records/registration/evening-exam-schedule/">Evening Exam Schedule</a></li>
+          <li><a href="http://www.wustl.edu/community/visitors/maps/">Campus Maps</a></li>
+        </ul>
+      </div>
+      <div class="links-group" id="academic-information">
+        <h2 onclick="academic()" id="academic-title">Academic Information <i class="fas fa-chevron-circle-right"></i></h2>
+        <ul id="academic-links">
+          <li><a href="http://www.wustl.edu/academics/">Academics & Schools</a></li>
+          <li><a href="http://bulletin.wustl.edu/">Bulletins</a></li>
+          <li><a href="https://registrar.wustl.edu/">Office of University Registrar</a></li>
+        </ul>
+      </div>
+      <div class="links-group" id="help-services">
+        <h2 onclick="help()" id="help-title">Help Services <i class="fas fa-chevron-circle-right"></i></h2>
+        <ul id="help-links">
+          <li><a href="http://sexualviolence.wustl.edu/">Sexual & Relationship Violence</a></li>
+          <li><a href="https://sts.wustl.edu/">Student Technology Services</a></li>
+          <li><a href="http://wustlkey.wustl.edu/Pages/default.aspx">WUSTL Key Help</a></li>
+        </ul>
+      </div>
+      <div class="links-groups" id="forms-and-inquiries">
+        <h2 onclick="formies()" id="forms-title">Forms & Inquiries <i class="fas fa-chevron-circle-right"></i></h2>
+        <ul id="forms-links">
+          <li><a href="https://students.wustl.edu/student-feedback-form/">Feedback Form</a></li>
+          <li><a href="http://diversity.wustl.edu/students/mosaic/bias-report-support-system/">Bias Reporting</a></li>
+          <li><a href="http://registrar.wustl.edu/university-policy-information/">University Policies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="class-schedule">
+      <table id="grid-view">
+        <tr>
+          <td></td>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <td></td>
+        </tr>
+        <tr id="a8">
+          <th class="time">8:00 am</th>
+          <td class="monday"></td>
+          <td class="tuesday"></td>
+          <td class="wednesday"></td>
+          <td class="thursday"></td>
+          <td class="friday"></td>
+        </tr>
+        <tr id="a83">
+          <th class="time">8:30 am</th>
+          <td class="monday"></td>
+          <td class="tuesday">Web Development</td>
+          <td class="wednesday"></td>
+          <td class="thursday">Web Development</td>
+          <td class="friday"></td>
+        </tr>
+        <tr id="a9">
+          <th class="time">9:00 am</th>
+          <td class="monday"></td>
+          <td class="tuesday"></td>
+          <td class="wednesday"></td>
+          <td class="thursday"></td>
+          <td class="friday"></td>
+        </tr>
+        <tr id="a93">
+          <th class="time">9:30 am</th>
+          <td class="monday"></td>
+          <td class="tuesday"></td>
+          <td class="wednesday"></td>
+          <td class="thursday"></td>
+          <td class="friday"></td>
+        </tr>
+        <tr id="a10">
+          <th class="time">10:00 am</th>
+          <td class="monday"></td>
+          <td class="tuesday">Logic and Discrete</td>
+          <td class="wednesday"></td>
+          <td class="thursday">Logic and Discrete</td>
+          <td class="friday"></td>
+        </tr>
+        <tr id="a103">
+          <th class="time">10:30 am</th>
+          <td class="monday"></td>
+          <td class="tuesday">Mathematics</td>
+          <td class="wednesday"></td>
+          <td class="thursday">Mathematics</td>
+          <td class="friday"></td>
+        </tr>
+        <tr id="a11">
+          <th class="time">11:00 am</th>
+          <td class="monday">Matrix Algebra</td>
+          <td class="tuesday"></td>
+          <td class="wednesday">Matrix Algebra</td>
+          <td class="thursday"></td>
+          <td class="friday">Matrix Algebra</td>
+        </tr>
+        <tr id=a113>
+          <th class="time">11:30 am</th>
+          <td class="monday"></td>
+          <td class="tuesday"></td>
+          <td class="wednesday"></td>
+          <td class="thursday"></td>
+          <td class="friday"></td>
+        </tr>
+        <tr id="p12">
+          <th class="time">12:00 pm</th>
+          <td class="monday">Second Level</td>
+          <td class="tuesday">Second Level</td>
+          <td class="wednesday">Second Level</td>
+          <td class="thursday">Second Level</td>
+          <td class="friday">Second Level</td>
+        </tr>
+        <tr id="p123">
+          <th class="time">12:30 pm</th>
+          <td class="monday">Chinese I</td>
+          <td class="tuesday">Chinese I</td>
+          <td class="wednesday">Chinese I</td>
+          <td class="thursday">Chinese I</td>
+          <td class="friday">Chinese I</td>
+        </tr>
+        <tr id=p1>
+          <th class="time">1:00 pm</th>
+          <td class="monday"></td>
+          <td class="tuesday"></td>
+          <td class="wednesday"></td>
+          <td class="thursday"></td>
+          <td class="friday"></td>
+        </tr>
+      </table>
+      <table id="list-view">
+        <tr>
+          <th>Course ID</th>
+          <th>Title</th>
+          <th>Units</th>
+          <th>Opt</th>
+          <th>Day</th>
+          <th>Time</th>
+          <th>Location</th>
+          <th>Instructor</th>
+        </tr>
+        <tr id="web-dev">
+          <td>E81 CSE 204A 01</td>
+          <td>Web Development</td>
+          <td>3.0</td>
+          <td>C</td>
+          <td>T/R</td>
+          <td>8:30-9:50 AM</td>
+          <td>Urbauer 222</td>
+          <td>Clapp</td>
+        </tr>
+        <tr id="cse-240">
+          <td>E81 CSE 240 01</td>
+          <td>Logic and Discrete Mathematics</td>
+          <td>3.0</td>
+          <td>C</td>
+          <td>T/R</td>
+          <td>10:00-11:20 AM</td>
+          <td>Hillman Hall 60</td>
+          <td>Garnett</td>
+        </tr>
+        <tr id="chinese">
+          <td>L04 Chinese 211 02</td>
+          <td>Second Level Modern Chinese I</td>
+          <td>5.0</td>
+          <td>C</td>
+          <td>M/T/W/R/F</td>
+          <td>12:00-12:50 PM</td>
+          <td>Eads 103</td>
+          <td>Chen</td>
+        </tr>
+        <tr id="math">
+          <td>L24 Math 309 01</td>
+          <td>Matrix Algebra</td>
+          <td>3.0</td>
+          <td>C</td>
+          <td>M/W/F</td>
+          <td>11:00-11:50 AM</td>
+          <td>Seigle Hall L006</td>
+          <td>Kumar</td>
+        </tr>
+      </table>
+      <div class="buttons">
+        <button onclick="grid()" id="grid-button"><i class="fas fa-border-all"></i> Grid View</button>
+        <button onclick="list()" id="list-button"><i class="fas fa-list"></i> List View</button>
+      </div>
+    </div>
+    <div id="webstac-news">
+      <div class="news">
+        <div class="news-head">
+          <img src="duo-icon.png" alt="Duo Mobile Image">
+          <h2>DuoMobile Reminder</h2>
+        </div>
+        <p>Students are now required to use WashU 2FA (two-factor authentication) when accessing most WUSTL Key systems from off campus. More information and details about 2FA and the DUO mobile app option are available on the WashU 2FA website.</p>
+        <a class="call-to-action">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="news">
+        <div class="news-head">
+          <img src="voter-pic.png" alt="Voter Registration Image">
+          <h2>Voter Registration</h2>
+        </div>
+        <p>The Gephardt Institute partners with TurboVote to offer free, convenient online voter registration in all 50 states. The platform also facilitates paper registration for states that require it (they will mail you a completed form to sign and send in!).</p>
+        <a class="call-to-action">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="news" id="big-pend">
+        <div class="news-head">
+          <img src="EXCLAM.png" alt="Pending Actions Image" id="exclam">
+          <h2 id="pend">Pending Actions</h2>
+        </div>
+        <p>If you plan to graduate in May 2020, don't forget to file your Intent to Graduate from WebSTAC! The filing deadline for May Intents is Thursday, December 19th.</p>
+        <a class="call-to-action">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <form id="big-form">
+    <h1>Change Your Major or Minor</h1>
+    <fieldset>
+      <label>Your Major:
+        <select id="major-value" name="major">
+          <option value="Undeclared">Undeclared</option>
+          <option value="Biomedical Engineering">Biomedical Engineering</option>
+          <option value="Business & Computer Science">Business & Computer Science</option>
+          <option value="Chemical Engineering">Chemical Engineering</option>
+          <option value="Computer Engineering">Computer Engineering</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Computer Science + Math">Computer Science + Math</option>
+          <option value="Electrical Engineering">Electrical Engineering</option>
+          <option value="Environmental Engineering">Environmental Engineering</option>
+          <option value="Financial Engineering">Financial Engineering</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Systems Science & Engineering">Systems Science & Engineering</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <label>Your Minor:
+        <select id="minor-value" name="minor">
+          <option value="None">None</option>
+          <option value="Aerospace Engineering">Aerospace Engineering</option>
+          <option value="Applied Physics & Electrical Engineering">Applied Physics & Electrical Engineering</option>
+          <option value="Bioinformatics">Bioinformatics</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Electrical Engineering">Electrical Engineering</option>
+          <option value="Environmental Engineering">Environmental Engineering</option>
+          <option value="Human-Computer Interaction">Human-Computer Interaction</option>
+          <option value="Materials Science & Engineering">Materials Science & Engineering</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Mechatronics">Mechatronics</option>
+          <option value="Nanoscale Science & Engineering">Nanoscale Science & Engineering</option>
+          <option value="Robotics">Robotics</option>
+          <option value="Systems Science & Engineering">Systems Science & Engineering</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <label>Expected Graduation:
+        <select id="graduation-value" name="expected-graduation">
+          <option value="2023">Summer 2023</option>
+          <option value="2023">Spring 2023</option>
+          <option value="2022">Fall 2022</option>
+          <option value="2022">Summer 2022</option>
+          <option value="2022">Spring 2022</option>
+          <option value="2021">Fall 2021</option>
+          <option value="2021">Summer 2021</option>
+          <option value="2021">Spring 2021</option>
+          <option value="2020">Fall 2020</option>
+          <option value="2020">Summer 2020</option>
+          <option value="2020">Spring 2020</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <label> Reason for Change:
+        <textarea name="name" rows="7" cols="91"></textarea>
+      </label>
+    </fieldset>
+    <p id="dots">•••••••••••••••</p>
+    <p onclick="submitFunction()" id="submit">Submit</p>
+  </form>
+  <script src="script.js"></script>
+</body>
+
+</html>
